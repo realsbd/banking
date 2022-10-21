@@ -41,10 +41,12 @@ class TransactionController extends Controller
             'description' =>'required'
         ]);
 
-        sleep(5);
 
-        if($input['amount'] > Auth::user()->balance){
+        if($input['amount'] > Auth::user()->balance) {
             return redirect()->back()->with('status', 'Amount exceeds your balance');
+        }
+        if (Auth::user()->status === 'pending') {
+            return redirect()->back()->with('status', 'Your account is not yet active to make transfer');
         }
 
         return view('confirm', ['inputs' => $input]);

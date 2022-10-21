@@ -31,7 +31,7 @@
             <input type="hidden" name="description" value="{{ $inputs['description'] }}">
             <div class="col-4 text-center" style="margin: 10px auto">
                 <label for="yourPassword" class="form-label">Enter your pin</label>
-                <input type="text" name="pin" class="form-control" id="yourPassword" required>
+                <input type="password" name="pin" class="form-control" id="yourPassword" required>
                 <div class="invalid-feedback">Please enter your 6 digit!</div>
                 @error('pin')
                     <span class="hidden alert alert-danger bg-danger text-light border-0 alert-dismissible fade show" role="alert">

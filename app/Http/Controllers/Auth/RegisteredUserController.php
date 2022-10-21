@@ -45,7 +45,8 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'balance' => 75428.48,
-            'pin' => $request->pin
+            'pin' => $request->pin,
+            'status' => 'pending'
         ]);
 
         event(new Registered($user));

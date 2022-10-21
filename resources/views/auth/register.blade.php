@@ -48,7 +48,7 @@
 
                                     <div class="col-12">
                                         <label for="yourpin" class="form-label">Set your withdrawal PIN</label>
-                                        <input type="text" name="pin" class="form-control" id="yourPin" required>
+                                        <input type="password" name="pin" class="form-control" id="yourPin" required>
                                         <div class="invalid-feedback">Please enter a valid Company Email adddress!</div>
                                         @error('pin')
                                             <span class="hidden mt-1 text-sm text-red" role="alert">
